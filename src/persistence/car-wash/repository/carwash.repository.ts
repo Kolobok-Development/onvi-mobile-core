@@ -35,13 +35,14 @@ export class CarwashRepository implements ICarwashRepository {
     try {
       const request: AxiosResponse = await firstValueFrom(
         this.httpService.get(
-          `${this.baseUrl}/external/collection/list?code=${this.sourceCode}`,
+          `${this.baseUrl}/external/collection/group/list?code=${this.sourceCode}`,
           { headers: headersReq },
         ),
       );
 
       return request.data;
     } catch (e) {
+      console.log(`Error ds-cloud`);
       console.log(e);
     }
   }
