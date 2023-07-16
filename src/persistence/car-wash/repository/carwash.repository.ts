@@ -42,6 +42,7 @@ export class CarwashRepository implements ICarwashRepository {
 
       return request.data;
     } catch (e) {
+      console.log(`Error ds-cloud`);
       console.log(e);
     }
   }
