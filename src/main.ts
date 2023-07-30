@@ -12,6 +12,6 @@ async function bootstrap() {
   app.use(compression());
   app.use(helmet());
   app.enable('trust proxy');
-  await app.listen(process.env.APP_PORT || 3001);
+  await app.listen(process.env.APP_PORT || 3003);
 }
 bootstrap();
